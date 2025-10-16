@@ -12,11 +12,10 @@ public class Player : MonoBehaviour
     private Weapon _currentWeapon;
     private int _currentWeaponIndex = 0;
     private int _currentHealth;
-    private Animator _animator;
-    
+
     public int Money { get; private set; }
 
-    public event UnityAction<int,int> HealthChanged;
+    public event UnityAction<int, int> HealthChanged;
     public event UnityAction<int> MoneyChanged;
     public event UnityAction<Weapon> WeaponChanged;
 
@@ -24,10 +23,8 @@ public class Player : MonoBehaviour
     {
         SetWeapon();
         _currentHealth = _heatlh;
-        _animator = GetComponent<Animator>();
     }
-
-
+    
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -36,17 +33,12 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnEnemyDied(int reward)
-    {
-        Money += reward;
-    }
-
     public void ApplyDamage(int _damage)
     {
         _currentHealth -= _damage;
         HealthChanged?.Invoke(_currentHealth, _heatlh);
 
-        if(_currentHealth <= 0)
+        if (_currentHealth <= 0)
         {
             Destroy(gameObject);
         }
@@ -64,28 +56,33 @@ public class Player : MonoBehaviour
         _weapons.Add(weapon);
     }
 
-    public void NextWeapon(){
+    public void NextWeapon()
+    {
         Debug.Log(_currentWeaponIndex);
-        if(_currentWeaponIndex == _weapons.Count - 1)
+        if (_currentWeaponIndex == _weapons.Count - 1)
             _currentWeapon = _weapons[_currentWeaponIndex];
-        
-        else{
+
+        else
+        {
             _currentWeaponIndex++;
             SetWeapon();
         }
     }
 
-    public void PreviousWeapon(){
-        if(_currentWeaponIndex == 0)
+    public void PreviousWeapon()
+    {
+        if (_currentWeaponIndex == 0)
             _currentWeapon = _weapons[_currentWeaponIndex];
-        
-        else{
+
+        else
+        {
             _currentWeaponIndex--;
             SetWeapon();
         }
     }
 
-    private void SetWeapon(){
+    private void SetWeapon()
+    {
         _currentWeapon = _weapons[_currentWeaponIndex];
         WeaponChanged?.Invoke(_currentWeapon);
     }

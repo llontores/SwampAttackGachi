@@ -2394,7 +2394,7 @@ MonoBehaviour:
   - Template: {fileID: 9145635958967453616, guid: 5464d0b74bb71734e928cb6d2c33a064, type: 3}
     Delay: 1
     Count: 5
-  - Template: {fileID: 9145635958967453616, guid: 5464d0b74bb71734e928cb6d2c33a064, type: 3}
+  - Template: {fileID: 9145635958967453616, guid: 06d3a870e8629af4e975aa413259a045, type: 3}
     Delay: 0.5
     Count: 10
   _player: {fileID: 631000640}

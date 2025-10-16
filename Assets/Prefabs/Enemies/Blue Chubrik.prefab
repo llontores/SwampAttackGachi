@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 9145635958967453609}
   - component: {fileID: 9145635958967453610}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Blue Chubrik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,8 +35,8 @@ Transform:
   m_GameObject: {fileID: 9145635958967453616}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.802, y: -3.535, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: -5.802, y: -3.675, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4723107735738678597, guid: 6fc66c021eec74942b4e71a3fde4dc04, type: 3}
+  m_Sprite: {fileID: -1371030636, guid: ec2545f26ca385e4096e0eb85ee4fee3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ Animator:
   m_GameObject: {fileID: 9145635958967453616}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c0fd826e3d98327479618aa38c6c6e8a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 17dbdcfb1969eb147ad7468f5a6ef0db, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -146,18 +146,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.001404047, y: -0.0047188997}
+  m_Offset: {x: -0.001404047, y: -0.000001385808}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.55}
+    oldSize: {x: 0.33, y: 0.33}
     newSize: {x: 0.32, y: 0.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32739878, y: 0.5778215}
+  m_Size: {x: 0.32739878, y: 0.33251533}
   m_EdgeRadius: 0
 --- !u!114 &9145635958967453611
 MonoBehaviour:
@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb8d0ae002c6bf4b9249006fa7b1dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 5
-  _reward: 1
+  _health: 7
+  _reward: 2
 --- !u!114 &9145635958967453605
 MonoBehaviour:
   m_ObjectHideFlags: 0
